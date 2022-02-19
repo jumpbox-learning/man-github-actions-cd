@@ -111,7 +111,3 @@ jobs:
           cd ./manifests/deployments/
           IMAGENAME=${{ env.REGISTRY }}/${{ env.REPO_OWNER_LOWERCASE }}/${{ env.IMAGE_NAME }}:$VERSION yq -i '.spec.template.spec.containers[0].image = env(IMAGENAME)' deployment.yaml
 
-      - name: Check manifest content
-        run: |
-          cd ./manifests/deployments/
-          cat deployment.yaml
