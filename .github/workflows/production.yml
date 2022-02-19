@@ -34,8 +34,8 @@ jobs:
   build-kubeops-ng:
     name: Continuous Integration
     runs-on: ubuntu-20.04
-    needs:
-      - scan-valner
+    # needs:
+    #   - scan-valner
     steps:
       - uses: actions/checkout@v2
         with:
